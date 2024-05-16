@@ -1,2 +1,3 @@
 # resume
-My Profile and Work History
+See it live [here](https://jakemclelland.github.io/resume/)
+
