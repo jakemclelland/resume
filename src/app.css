@@ -1,0 +1,215 @@
+.app {
+  text-align: center;
+  background: linear-gradient(to bottom, #2a4165, #222c3b, #222a3b, #000);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.5);
+  min-height: 100vh;
+}
+
+.app-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .app-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.app-container {
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  column-gap: 5rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.hello {
+  grid-column: 1;
+  width: 200px;
+  max-width: 100%;
+}
+
+.body-panel {
+  grid-column: 2;
+  margin: 2rem 0;
+  padding: 0 5rem 0 0;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  align-items: start;
+  height: 500px;
+  min-width: 75%;
+  overflow: auto;
+}
+
+.tab {
+  display: none;
+}
+
+.tab:target {
+  display: block;
+}
+
+.menu {
+  display: block;
+  margin: 1rem 0 0 0;
+  border-bottom: 2px solid #2a4165;
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-height: 40px;
+  width: 100%;
+  z-index: 1000;
+}
+
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: flex-start;
+}
+
+.menu li {
+  float: left;
+}
+
+.menu li a {
+  text-align: center;
+  padding: 0.5rem 1.5rem;
+  text-decoration: none;
+  color: #ba960f;
+  transition: font-size 0.2s ease;
+}
+
+.menu li a:hover {
+  color: #ba690f;
+  font-size: 1.5rem;
+}
+
+.spare-blue-highlight-color {
+  color: #3e506b;
+}
+
+.experiences:target,
+.about-me:target,
+.certifications:target,
+.other-skills:target,
+.skills:target {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  align-items: start;
+}
+.experiences ul {
+  list-style-type: none;
+}
+
+.experience-company {
+  font-size: 2rem;
+}
+
+.experience {
+  margin: 0 0 2rem 0;
+}
+
+.experience-time,
+.experience-location {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 1rem;
+  margin: 0 0 0 1rem;
+}
+
+.experience-job_title {
+  font-weight: bold;
+  margin: 1rem 0 0 1rem;
+}
+
+.roles {
+  margin-top: 1rem;
+  font-size: 1.25rem;
+}
+
+.roles li {
+  list-style-type: disc;
+  margin-top: 0.5rem;
+}
+
+.role-title {
+  font-weight: bold;
+  margin: 0 1rem 0 0;
+}
+
+.role-description {
+  font-size: 1rem;
+}
+
+.role-title-duties {
+  font-weight: bold;
+  margin: 0 0 0 -1.5rem;
+}
+
+.duty-list {
+  margin-bottom: 1rem;
+}
+
+.certifications {
+  margin-top: 1rem;
+}
+
+.certifications a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.certifications a:hover {
+  color: #ba960f;
+}
+
+.cert {
+  margin: 1rem 0;
+}
+
+.history {
+  margin-left: 3rem;
+}
+
+.history a,
+footer a {
+  text-decoration: none;
+  padding: 1rem;
+  color: #ba960f;
+}
+
+.history a:hover,
+footer a {
+  color: #ba690f;
+}
+
+.section-title {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #ba690f;
+}
+
+.profile-image {
+  width: 150px;
+  border-radius: 50%;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding-bottom: 1rem;
+}
