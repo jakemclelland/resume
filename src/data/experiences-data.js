@@ -1,7 +1,21 @@
 export const experiences = [
     {
+        company: "Independent Contractor",
+        time: "May 2024 - Present",
+        roles: [
+            {
+                title: "DevOps Engineer:",
+                description: "Developed and deployed scalable, containerized microservices using .NET Aspire, Azure Container Apps, and Azure Functions, integrating Service Bus Queues and Topics for event-driven processing. Implemented CI/CD pipelines with Azure DevOps, YAML, and Bicep files to automate building, testing, and deployment of both API, Functions and other serverless components."
+            },
+            {
+                title: "React Developer:",
+                description: "Developed a responsive personal profile page using React JS, vanilla JavaScript, and pure CSS. Utilized React components to build a modular and maintainable codebase"
+            }
+        ],
+    },
+    {
       company: "CodePoet, LLC",
-      time: "2019 - Present",
+      time: "June 2019 - April 2024",
       location: "Remote",
       roles: [
         {
@@ -33,7 +47,7 @@ export const experiences = [
     },
     {
       company: "Watchtower",
-      time: "2014 - 2019",
+      time: "September 2014 - June 2019",
       location: "Onsite (NY) and remote",
       roles: [
         {
@@ -54,8 +68,18 @@ export const experiences = [
       ],
     },
     {
+      company: "C2 Systems, USA",
+      time: "November 2016 - November 2017",
+      roles: [
+        {
+            title: "Software Developer:",
+            description: "•	Developed Azure Service Fabric web services and web-based software for loan origination of small business loans for the banking industry. Developed stateful and stateless microservices written in C#.",
+        }
+      ],
+    },
+    {
       company: "Humana",
-      time: "2012 - 2016",
+      time: "February 2012 - April 2016",
       location: "Dallas TX",
   
       roles: [
@@ -88,7 +112,7 @@ export const experiences = [
     },
     {
       company: "Cypress Software Systems / CRIF Lending Solutions",
-      time: "2006 - 2012",
+      time: "May 2006 - February 2012",
       location: "Dallas TX",
       roles: [
         {
