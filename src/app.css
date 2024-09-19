@@ -26,16 +26,25 @@
   display: grid;
   grid-template-columns: 1fr 3fr;
   column-gap: 5rem;
+}
 
-  @media (max-width: 768px) {
+@media (max-width: 768px) {
+  .app-container {
     grid-template-columns: 1fr;
+    row-gap: 2rem;
   }
 }
 
 .hello {
   grid-column: 1;
-  width: 200px;
-  max-width: 100%;
+  width: 100%;
+  max-width: none;
+}
+
+@media (max-width: 768px) {
+  .hello {
+    display: none;
+  }
 }
 
 .body-panel {
@@ -49,6 +58,17 @@
   height: 500px;
   min-width: 75%;
   overflow: auto;
+}
+
+@media (max-width: 768px) {
+  .body-panel {
+    
+    grid-column: 1;
+    min-width: 85%;
+    padding: 1rem;
+    margin: 1rem 1rem;
+    max-height: 80%;
+  }
 }
 
 .tab {
@@ -76,7 +96,7 @@
   margin: 0;
   padding: 0;
   overflow: hidden;
-  display: inline-flex;
+  display: flex;
   align-items: flex-start;
 }
 
@@ -85,6 +105,7 @@
 }
 
 .menu li a {
+  display: block;
   text-align: center;
   padding: 0.5rem 1.5rem;
   text-decoration: none;
@@ -95,6 +116,104 @@
 .menu li a:hover {
   color: #ba690f;
   font-size: 1.5rem;
+}
+
+.hamburger {
+  display: none;
+  position: relative;
+  width: 27px;
+  height: 21px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+  margin: 0 0 0 1rem;
+}
+
+.hamburger .line {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background-color: #ba960f;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.hamburger .line1 {
+  top: 0;
+}
+
+.hamburger .line1-rotated {
+  top: 0;
+  transform: rotate(45deg);
+  transform-origin: top left;
+}
+
+.hamburger .line2 {
+  top: 45%;
+}
+
+.hamburger .line2-rotated {
+  top: 45%;
+  transform: translateY(-50%);
+  opacity: 0;
+}
+
+.hamburger .line3 {
+  bottom: 0;
+}
+
+.hamburger .line3-rotated {
+  bottom: 0;
+  transform: rotate(-45deg);
+  transform-origin: bottom left;
+}
+
+.menu-text {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .menu ul {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+    margin: -1.75rem 0 0 2.5rem;
+  }
+
+  .menu li {
+    float: none;
+    width: 100%;
+    margin: 0.15rem 0 0.25rem 0;
+  }
+
+  .menu li a {
+    text-align: left;
+    padding: 0.25rem 1rem;
+  }
+  
+  .hamburger {
+    display: block; /* Show hamburger button */
+  }
+
+  .menu.show-menu ul {
+    display: flex;
+  }
+
+  .menu-text {
+    display: inline-block;
+    text-align: start;
+    font-size: 1.25rem;
+    color: #ba960f;
+    margin: -0.5rem 0 0 2.5rem;
+    
+  }
+
+  .menu-text.hide-menu-text {
+    display: none;
+  }
 }
 
 .spare-blue-highlight-color {
@@ -213,3 +332,18 @@ footer {
   width: 100%;
   padding-bottom: 1rem;
 }
+
+.hello-h2 {
+  font-size: 2rem;
+  display: block;
+}
+
+.iam-h1 {
+  font-size: 3rem;
+  display: block;
+}
+
+.programmer-h3 {
+  font-size: 1.5rem;
+  display: block;
+} 

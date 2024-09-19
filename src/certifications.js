@@ -13,8 +13,8 @@ export default function Certifications() {
 
 function Certification({certObj}) {
     return (
-        <div className="cert">
-            <a target="_blank" rel="noopener noreferrer" href={certObj.link}>{certObj.description}</a>
+        <div className="cert" key={certObj.key}>
+            <a target="_blank" rel="noopener noreferrer" href={certObj.link} key={certObj.id}>{certObj.description}</a>
         </div>
     );
 }

@@ -16,7 +16,7 @@ export default function Skills() {
 
 function Skill({ skillObj }) {
   return (
-    <li>
+    <li key={skillObj.id}>
       <span className="role-title">{skillObj.title}</span>
       <span className="role-description">{skillObj.description}</span>
     </li>

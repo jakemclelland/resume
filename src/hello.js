@@ -3,13 +3,9 @@ export default function Hello() {
     <div className="hello">
       <img src="./profile.jpg" className="profile-image" alt="Profile of Jake" />
       <p>
-        <h2>Hello!</h2>
-      </p>
-      <p>
-        <h1>I'm Jake</h1>
-      </p>
-      <p>
-        <h2>a programmer</h2>
+        <span className="hello-h2">Hello!</span>
+        <span className="iam-h1">I'm Jake</span>
+        <span className="programmer-h3">a programmer</span>
       </p>
     </div>
   );

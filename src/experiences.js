@@ -21,7 +21,7 @@ function Experience({ experienceObj }) {
     experienceObj.job_title && experienceObj.job_title.length > 0;
 
   return (
-    <li className="experience">
+    <li className="experience" key={experienceObj.id}>
       <div className="experience-company">{experienceObj.company}</div>
       <div className="experience-time">{experienceObj.time}</div>
       <div className="experience-location">{experienceObj.location}</div>
@@ -54,7 +54,7 @@ function Role({ roleObj }) {
   return (
     <div>
       {isRoleBased ? (
-        <li>
+        <li key={roleObj.id}>
           {hasTitle ? <span className="role-title">{roleObj.title}</span> : ""}
           {hasDescription ? (
             <span className="role-description">{roleObj.description}</span>
@@ -89,5 +89,5 @@ function Duties({ dutiesObj }) {
 }
 
 function Duty({ dutyObj }) {
-  return <li className="role-description">{dutyObj.description}</li>;
+  return <li className="role-description" key={dutyObj.id}>{dutyObj.description}</li>;
 }

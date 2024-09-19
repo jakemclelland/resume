@@ -15,5 +15,5 @@ export default function OtherSkills() {
 }
 
 function OtherSkill({ skillObj }) {
-  return <li>{skillObj.description}</li>;
+  return <li key={skillObj.id}>{skillObj.description}</li>;
 }

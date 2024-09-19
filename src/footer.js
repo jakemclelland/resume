@@ -10,13 +10,7 @@ export default function Footer() {
       >
         LinkedIn
       </a>
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        href="https://www.codepoetllc.com/"
-      >
-        CodePoet LLC
-      </a>
+      
       <a
         target="_blank"
         rel="noopener noreferrer"
