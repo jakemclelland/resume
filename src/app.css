@@ -1,3 +1,15 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 .app {
   text-align: center;
   background: linear-gradient(to bottom, #2a4165, #222c3b, #222a3b, #000);
@@ -22,10 +34,12 @@
 }
 
 .app-container {
-  margin-top: 80px;
+  /* margin-top: 80px; */
   display: grid;
   grid-template-columns: 1fr 3fr;
   column-gap: 5rem;
+  /* min-height: 100vh; */
+  /* top: 40px */
 }
 
 @media (max-width: 768px) {
@@ -58,11 +72,11 @@
   height: 500px;
   min-width: 75%;
   overflow: auto;
+  word-wrap: break-word;
 }
 
 @media (max-width: 768px) {
   .body-panel {
-    
     grid-column: 1;
     min-width: 85%;
     padding: 1rem;
@@ -81,14 +95,16 @@
 
 .menu {
   display: block;
-  margin: 1rem 0 0 0;
+  margin: 0.5rem 0 0 0;
   border-bottom: 2px solid #2a4165;
   position: fixed;
   top: 0;
   left: 0;
   min-height: 40px;
   width: 100%;
-  z-index: 1000;
+  /* z-index: 1000; */
+  background-color: linear-gradient(to bottom, #2a4165, #222c3b);
+  transition: height 0.3s ease;
 }
 
 .menu ul {
@@ -98,10 +114,11 @@
   overflow: hidden;
   display: flex;
   align-items: flex-start;
+  /* flex-direction: column; */
 }
 
 .menu li {
-  float: left;
+  float: left;  
 }
 
 .menu li a {
@@ -116,6 +133,10 @@
 .menu li a:hover {
   color: #ba690f;
   font-size: 1.5rem;
+}
+
+.menu li a .active {
+  color: #ba690f;
 }
 
 .hamburger {
@@ -213,6 +234,11 @@
 
   .menu-text.hide-menu-text {
     display: none;
+  }
+
+  .content {
+    margin-top: 3rem;
+    transition: margin-top 0.3s ease;
   }
 }
 
